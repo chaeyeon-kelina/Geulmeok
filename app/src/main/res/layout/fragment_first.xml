@@ -1,28 +1,242 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".FirstFragment">
+    android:background="#FFFFFF">
 
-    <TextView
-        android:id="@+id/textview_first"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/hello_first_fragment"
-        app:layout_constraintBottom_toTopOf="@id/button_first"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button_first"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/nanummyeongjo"
+            android:text="2022.00.00"
+            android:textColor="#000000"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/mainTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nanummyeongjo"
+            android:text="안녕하세요, AAA !"
+            android:textColor="#000000"
+            android:textSize="22dp" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/routine_bg_img"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ic_bookmark1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bookmark_filled" />
+                    <TextView
+                        android:id="@+id/time_where"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오전 8:00"
+                        android:layout_toRightOf="@+id/ic_bookmark1"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/routine1_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="작업 장소 루틴"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ic_bookmark1"
+                        android:layout_below="@+id/time_where"
+                        android:textSize="18dp"/>
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_add_plus"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ic_bookmark2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bookmark_filled_1" />
+                    <TextView
+                        android:id="@+id/time_ready"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오전 8:00"
+                        android:layout_toRightOf="@+id/ic_bookmark2"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/routine2_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="작업 준비 루틴"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ic_bookmark2"
+                        android:layout_below="@+id/time_ready"
+                        android:textSize="18dp"/>
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_add_plus"/>
+
+                </RelativeLayout>
+
+                <include layout="@layout/fragment_todo"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ic_bookmark3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bookmark_filled_2" />
+                    <TextView
+                        android:id="@+id/time_work"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오전 8:00"
+                        android:layout_toRightOf="@+id/ic_bookmark3"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/routine3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="작업 루틴"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ic_bookmark3"
+                        android:layout_below="@+id/time_work"
+                        android:textSize="18dp"/>
+
+                    <Button
+                        android:id="@+id/find_routine"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_add_plus"/>
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="30dp"
+                    android:layout_marginTop="10dp">
+
+                    <ImageView
+                        android:id="@+id/ic_bookmark4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_bookmark_filled_3" />
+                    <TextView
+                        android:id="@+id/time_note"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="오전 8:00"
+                        android:layout_toRightOf="@+id/ic_bookmark4"
+                        android:layout_marginTop="15dp"
+                        android:layout_marginLeft="10dp"/>
+                    <TextView
+                        android:id="@+id/routine4_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="작업 기록 루틴"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@+id/ic_bookmark4"
+                        android:layout_below="@+id/time_note"
+                        android:textSize="18dp"/>
+
+                    <Button
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/ic_add_plus"/>
+
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="200dp"/>
+
+
+
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_routine"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/next"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textview_first" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_gravity="bottom|end"
+        android:layout_marginStart="@dimen/fab_margin"
+        android:layout_marginLeft="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginRight="@dimen/fab_margin"
+        android:layout_marginBottom="85dp"
+        android:backgroundTint="#ffffff"
+        app:backgroundTint="@color/colorGray3"
+        app:srcCompat="@drawable/ic_btn_icon_find_routine"
+        tools:ignore="VectorDrawableCompat" />
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
