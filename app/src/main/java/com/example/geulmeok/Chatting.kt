@@ -1,15 +1,13 @@
 package com.example.geulmeok
 
 import android.content.Intent
-import android.os.Bundle
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import android.os.Bundle
 
-
-class Recommend : AppCompatActivity() {
+class Chatting : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_recommend)
+        setContentView(R.layout.activity_chatting)
     }
 
     override fun onBackPressed() {
@@ -19,4 +17,5 @@ class Recommend : AppCompatActivity() {
         startActivity(intent) //인텐트 이동
         finish() //현재 액티비티 종료
     }
+
 }

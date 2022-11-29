@@ -2,19 +2,11 @@ package com.example.geulmeok
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import androidx.navigation.NavController
-import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-import com.example.geulmeok.databinding.FragmentFirstBinding
+import androidx.fragment.app.Fragment
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import kotlinx.android.synthetic.main.content_main.*
-import kotlinx.android.synthetic.main.fragment_first.*
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -28,8 +20,8 @@ class FirstFragment : Fragment() {
 
 
     override fun onCreateView(
-            inflater: LayoutInflater, container: ViewGroup?,
-            savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
     ): View? {
 
         val view = inflater.inflate(R.layout.fragment_first, container, false)
@@ -76,4 +68,12 @@ class FirstFragment : Fragment() {
 //            navController.navigate(R.id.action_FirstFragment_to_SecondFragment)
 //        }
     }
+
+    fun onBackPressed() {
+        val intent = Intent(Intent.ACTION_MAIN)
+        intent.addCategory(Intent.CATEGORY_HOME)
+        intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
+    } // 뒤로가기 버튼 클릭했을 때 홈으로 이동하기
+
 }

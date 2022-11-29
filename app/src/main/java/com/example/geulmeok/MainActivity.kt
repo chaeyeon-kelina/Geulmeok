@@ -1,20 +1,14 @@
 package com.example.geulmeok
 
+//import com.example.geulmeok.databinding.ActivityMainBinding
+import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.FragmentTransaction
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
-import androidx.navigation.fragment.findNavController
-//import com.example.geulmeok.databinding.ActivityMainBinding
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -23,15 +17,21 @@ class MainActivity : AppCompatActivity() {
     lateinit var tab3 : timer
     lateinit var tab4 : chart
     lateinit var tab5 : profile
+
+
+
 //    lateinit var navController: NavController
 //    companion object{
 //        const val TAG = "MainActivity"
 //    }
 //    private lateinit var binding: ActivityMainBinding
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val intent_chat = Intent(this, Chatting::class.java)
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 ////
@@ -57,7 +57,8 @@ class MainActivity : AppCompatActivity() {
         tab5 = profile()
 
         supportFragmentManager.beginTransaction().add(R.id.view_page, tab1).commit();
-        tabLayout.addOnTabSelectedListener(object: TabLayout.OnTabSelectedListener {
+        tabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+
             override fun onTabReselected(tab: TabLayout.Tab?) {
             }
 
@@ -65,12 +66,15 @@ class MainActivity : AppCompatActivity() {
             }
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
-                when(tab?.position){
+
+                when (tab?.position) {
                     0 -> {
                         //Tab1
                         replaceView(tab1)
                     }
-                    1 -> replaceView(tab2)
+                    1 -> {
+                        startActivity(intent_chat)
+                    }
                     2 -> replaceView(tab3)
                     3 -> replaceView(tab4)
                     4 -> replaceView(tab5)
@@ -94,6 +98,13 @@ class MainActivity : AppCompatActivity() {
 //        nav_btn_main.setupWithViewPager(after_login_viewpager)
 //
 
+    }
+    override fun startActivityForResult(intent: Intent?, requestCode: Int) {
+        var intent = intent
+        if (intent == null) {
+            intent = Intent()
+        }
+        super.startActivityForResult(intent, requestCode)
     }
 
     private fun replaceView(tab: Fragment){
