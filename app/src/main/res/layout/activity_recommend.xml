@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/mainTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nanummyeongjo"
+            android:text="AAA 작가님을 위한\n루틴을 추천드려요."
+            android:textColor="#000000"
+            android:textSize="22dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
+
+            <Button
+                android:id="@+id/btn_recommend_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/ic_btn_icon_recommend_routine"
+                android:text="#장소"
+                android:fontFamily="@font/nanummyeongjo"/>
+
+            <Button
+                android:id="@+id/btn_recommend_ready"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#준비"
+                android:fontFamily="@font/nanummyeongjo"
+                android:background="@drawable/ic_btn_icon_recommend_routine"/>
+
+            <Button
+                android:id="@+id/btn_recommend_work"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#쓰기"
+                android:fontFamily="@font/nanummyeongjo"
+                android:background="@drawable/ic_btn_icon_recommend_routine"/>
+
+            <Button
+                android:id="@+id/btn_recommend_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="#기록"
+                android:fontFamily="@font/nanummyeongjo"
+                android:background="@drawable/ic_btn_icon_recommend_routine"/>
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/frame_recommend"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/routine_bg_img">
+
+<!--            <include layout="@layout/fragment_place"/>-->
+
+        </FrameLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

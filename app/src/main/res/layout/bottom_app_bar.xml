@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:layout_above="@id/bottom_menu">
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -19,26 +20,31 @@
             tools:ignore="MissingConstraints">
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/nav_btn_main"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_routine_icon" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/nav_btn_chatting"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_chatting" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/nav_btn_timer"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_stopwatch" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/nav_btn_chart"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_bar_chart" />
 
             <com.google.android.material.tabs.TabItem
+                android:id="@+id/nav_btn_profile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:icon="@drawable/ic_profile" />
