@@ -24,4 +24,8 @@
         <item name="android:fontFamily">@font/nanummyeongjobold</item>
     </style>
 
+<!--    <style name="CustomToolBar" parent="@style/Widget.AppCompat.Toolbar">-->
+<!--        <item name="android:fontFamily">@font/nanummyeongjobold</item>-->
+<!--    </style>-->
+
 </resources>

@@ -4,27 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Chatting">
+    tools:context=".ChatSetting">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/tool_bar"
+        android:id="@+id/tool_bar_setting"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        android:background="#F7F6F2"
-        app:menu="@menu/menu_main" >
+        android:background="#F7F6F2">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="페니"
+            android:text="채팅 환경설정"
             android:textSize="15dp"
             android:textColor="#000000"
             android:fontFamily="@font/nanummyeongjo"
             android:textStyle="bold"
             android:layout_gravity="left" />
     </androidx.appcompat.widget.Toolbar>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
