@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="4dp"
+    android:background="@drawable/timer_todo"
+    app:cardElevation="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp">
+
+        <Button
+            android:id="@+id/btn_timer_todo"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/ic_baseline_play_circle_filled_24"
+            android:layout_margin="15dp"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/todo_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="집필"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanummyeongjo"
+            android:layout_weight="3"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:id="@+id/todo_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:text="00:00:00"
+            android:layout_weight="3"
+            android:textColor="#000000"
+            android:fontFamily="@font/nanummyeongjo"
+            android:textSize="18dp"/>
+
+        <Button
+            android:id="@+id/timer_todo_more"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/ic_baseline_more_vert_24"/>
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
