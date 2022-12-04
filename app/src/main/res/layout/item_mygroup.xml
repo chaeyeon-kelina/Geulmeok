@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="5dp"
+        android:background="@drawable/bg_mygroup">
+
+
+    <RelativeLayout
+        android:id="@+id/grouplayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/groupName"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanummyeongjoextrabold"
+            android:text="테스트 그룹"
+            android:textSize="15dp"
+            android:layout_margin="5dp"/>
+
+        <TextView
+            android:id="@+id/groupPeople"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nanummyeongjoextrabold"
+            android:layout_below="@+id/groupName"
+            android:text=" 6/10명"
+            android:layout_margin="5dp"
+            android:textSize="12dp"/>
+
+        <TextView
+            android:id="@+id/groupMaker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_toRightOf="@+id/groupName"
+            android:fontFamily="@font/nanummyeongjobold"
+            android:text="모임장 : AAA"
+            android:textSize="12dp" />
+
+        <TextView
+            android:id="@+id/groupGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/groupMaker"
+            android:layout_toRightOf="@+id/groupPeople"
+            android:fontFamily="@font/nanummyeongjoextrabold"
+            android:text="목표 : 8000자"
+            android:layout_margin="5dp"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/timer_todo_more"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:background="@drawable/ic_baseline_more_vert_24"/>
+    </RelativeLayout>
+
+</RelativeLayout>

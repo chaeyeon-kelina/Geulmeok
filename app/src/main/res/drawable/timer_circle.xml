@@ -9,7 +9,7 @@
             <gradient
                 android:startColor="#5B5854"
                 android:endColor="#CDC9C9"
-                android:angle=""/>
+                android:angle="0"/>
 <!--        <shape-->
 <!--            android:shape="ring"-->
 

@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
     lateinit var tab1 : FirstFragment
     lateinit var tab2 : chat
-    lateinit var tab3 : timer
+    lateinit var tab3 : third
     lateinit var tab4 : chart
     lateinit var tab5 : profile
 
@@ -52,7 +52,7 @@ class MainActivity : AppCompatActivity() {
 
         tab1 = FirstFragment()
         tab2 = chat()
-        tab3 = timer()
+        tab3 = third()
         tab4 = chart()
         tab5 = profile()
 
