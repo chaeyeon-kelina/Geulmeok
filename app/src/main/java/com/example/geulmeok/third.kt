@@ -74,7 +74,7 @@ class third : Fragment() {
 
 
     private lateinit var viewPageSetUp: ViewPager2
-    private val num_page = 4
+    private val num_page = 2
     private lateinit var mIndicator: CircleIndicator3
     private fun setInit() { //뷰페이저2 실행 메서드
 

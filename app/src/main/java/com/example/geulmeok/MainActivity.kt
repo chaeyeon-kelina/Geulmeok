@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.fragment_profile.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -82,6 +83,7 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+
 //        val adapter = PagerAdapter(supportFragmentManager)
 ////
 //        adapter.addFragment(FirstFragment(), "1번")
@@ -99,6 +101,22 @@ class MainActivity : AppCompatActivity() {
 //
 
     }
+
+
+    fun changeFragment(index: Int){
+        val intent_chatSetting = Intent(this, ChatSetting::class.java)
+        when(index){
+            1 -> {
+                supportFragmentManager.beginTransaction()
+                    .replace(R.id.view_page, ChangeName())
+                    .commit()
+            }
+            2 -> {
+                startActivity(intent_chatSetting)
+            }
+        }
+    }
+
     override fun startActivityForResult(intent: Intent?, requestCode: Int) {
         var intent = intent
         if (intent == null) {

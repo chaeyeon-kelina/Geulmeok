@@ -5,8 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.LinearLayout
-import android.widget.TextView
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -15,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [profile.newInstance] factory method to
+ * Use the [ChangeName.newInstance] factory method to
  * create an instance of this fragment.
  */
-class profile : Fragment() {
+class ChangeName : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -29,26 +27,14 @@ class profile : Fragment() {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
         }
-
-
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_profile, container, false)
-        val mActivity = activity as MainActivity
-        val btn_changeName = rootView.findViewById<TextView>(R.id.changeName)
-        val btn_goToChatSetting = rootView.findViewById<TextView>(R.id.goToChatSetting)
-        val btn_setWorkUnit = rootView.findViewById<TextView>(R.id.setWorkUnit)
-        val btn_TermsConditions = rootView.findViewById<TextView>(R.id.TermsConditions)
-        val btn_privacyPolicy = rootView.findViewById<TextView>(R.id.privacyPolicy)
-        val btn_logout = rootView.findViewById<TextView>(R.id.logout)
-
-        btn_changeName.setOnClickListener { mActivity.changeFragment(1) }
-        btn_goToChatSetting.setOnClickListener { mActivity.changeFragment(2) }
-        return rootView
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_change_name, container, false)
     }
 
     companion object {
@@ -58,12 +44,12 @@ class profile : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment profile.
+         * @return A new instance of fragment ChangeName.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            profile().apply {
+            ChangeName().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
