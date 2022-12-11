@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.widget.Toolbar
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -14,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ChangeName.newInstance] factory method to
+ * Use the [MakeGroup.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ChangeName : Fragment() {
+class MakeGroup : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,10 +33,8 @@ class ChangeName : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val rootView = inflater.inflate(R.layout.fragment_change_name, container, false)
-        val toolbar = rootView.findViewById<Toolbar>(R.id.tool_bar)
-        toolbar.setNavigationOnClickListener { requireActivity().onBackPressed() }
-        return rootView
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_make_group, container, false)
     }
 
     companion object {
@@ -47,12 +44,12 @@ class ChangeName : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment ChangeName.
+         * @return A new instance of fragment MakeGroup.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ChangeName().apply {
+            MakeGroup().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

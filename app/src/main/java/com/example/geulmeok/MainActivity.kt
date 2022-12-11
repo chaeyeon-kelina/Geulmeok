@@ -109,6 +109,7 @@ class MainActivity : AppCompatActivity() {
             1 -> {
                 supportFragmentManager.beginTransaction()
                     .replace(R.id.view_page, ChangeName())
+                    .addToBackStack(null)
                     .commit()
             }
             2 -> {
@@ -131,7 +132,9 @@ class MainActivity : AppCompatActivity() {
         selectedFragment = tab
         selectedFragment?.let {
             supportFragmentManager.beginTransaction()
-                .replace(R.id.view_page, it).commit()
+                .replace(R.id.view_page, it)
+                .addToBackStack(null)
+                .commit()
         }
     }
 

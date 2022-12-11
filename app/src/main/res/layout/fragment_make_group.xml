@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ChangeName">
+    tools:context=".MakeGroup">
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/tool_bar"
@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/nanummyeongjo"
-            android:text="닉네임 변경"
+            android:text="프로필 및 환경설정"
             android:textColor="#000000"
             android:textSize="18sp"
             android:textStyle="bold"
