@@ -41,7 +41,7 @@ class profile : Fragment() {
         val mActivity = activity as MainActivity
         val btn_changeName = rootView.findViewById<TextView>(R.id.changeName)
         val btn_goToChatSetting = rootView.findViewById<TextView>(R.id.goToChatSetting)
-        val btn_setWorkUnit = rootView.findViewById<TextView>(R.id.setWorkUnit)
+//        val btn_setWorkUnit = rootView.findViewById<TextView>(R.id.setWorkUnit)
         val btn_TermsConditions = rootView.findViewById<TextView>(R.id.TermsConditions)
         val btn_privacyPolicy = rootView.findViewById<TextView>(R.id.privacyPolicy)
         val btn_logout = rootView.findViewById<TextView>(R.id.logout)

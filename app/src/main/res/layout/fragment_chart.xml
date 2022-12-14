@@ -1,14 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".chart">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_setting_line"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nanummyeongjo"
+        android:text="2022.xx.xx ~ 2022.xx.xx"
+        android:textColor="#000000"
+        android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/mainTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:fontFamily="@font/nanummyeongjo"
+            android:text="이번 주 통계를 알려드려요."
+            android:textColor="#000000"
+            android:textSize="22dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="10dp">
+
+        <Button
+            android:id="@+id/btn_recommend_place"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_btn_icon_recommend_routine"
+            android:text="평균 작업량"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanummyeongjo"/>
+
+        <Button
+            android:id="@+id/btn_recommend_ready"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="평균 작업 시간"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/nanummyeongjo"
+            android:background="@drawable/ic_btn_icon_recommend_routine"/>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

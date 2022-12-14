@@ -140,6 +140,8 @@
                 </RelativeLayout>
 
                 <include layout="@layout/fragment_todo"/>
+                <include layout="@layout/fragment_todo"/>
+                <include layout="@layout/fragment_todo"/>
 
                 <RelativeLayout
                     android:layout_width="match_parent"

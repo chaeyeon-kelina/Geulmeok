@@ -1,15 +1,19 @@
 package com.example.geulmeok
 
 //import com.example.geulmeok.databinding.ActivityMainBinding
+
+import android.annotation.SuppressLint
 import android.content.Intent
+import android.graphics.Paint
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.view.*
+import android.widget.CheckBox
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
-import kotlinx.android.synthetic.main.fragment_profile.*
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +25,8 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
+
 //    lateinit var navController: NavController
 //    companion object{
 //        const val TAG = "MainActivity"
@@ -28,11 +34,14 @@ class MainActivity : AppCompatActivity() {
 //    private lateinit var binding: ActivityMainBinding
 
 
+    @SuppressLint("CutPasteId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
         val intent_chat = Intent(this, Chatting::class.java)
+
+
 
 //        binding = ActivityMainBinding.inflate(layoutInflater)
 ////
@@ -84,6 +93,26 @@ class MainActivity : AppCompatActivity() {
         })
 
 
+//        setContentView(R.layout.fragment_todo)
+//        val inflater = layoutInflater
+//
+//        val layout: View = inflater.inflate(
+//            R.layout.fragment_todo,
+//            findViewById<View>(R.id.layout_todo) as ViewGroup
+//        )
+//
+//        val todoCheck: CheckBox = layout.findViewById(R.id.todoCheck)
+//        val todoText: TextView = layout.findViewById(R.id.todoCheck)
+//
+//        todoCheck.setOnCheckedChangeListener { buttonView, isChecked ->
+//            if (isChecked) {
+//                todoText.paintFlags = todoText.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG
+//            }
+//            else
+//                todoText.paintFlags = todoText.paintFlags or Paint.STRIKE_THRU_TEXT_FLAG.inv()
+//        }
+
+
 //        val adapter = PagerAdapter(supportFragmentManager)
 ////
 //        adapter.addFragment(FirstFragment(), "1번")
@@ -101,7 +130,6 @@ class MainActivity : AppCompatActivity() {
 //
 
     }
-
 
     fun changeFragment(index: Int){
         val intent_chatSetting = Intent(this, ChatSetting::class.java)
